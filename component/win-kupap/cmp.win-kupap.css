@@ -41,6 +41,7 @@ cmp-win-kupap .each {
 		font-weight: bold;
 	}
 	cmp-win-kupap .each .organ {
+		font-size: 80%;
 		font-style: oblique;
 		color: #777;
 	}
@@ -55,12 +56,22 @@ cmp-win-kupap .each {
 		padding: 0 10px 0 10px;
 	 	border: 1px solid #777;
 	 	border-radius: 5px;
-		font-style: oblique;
 */
 		
 }
 
 
+
+
+
+
+
+
+cmp-win-kupap .each .edited {
+	font-size: 80%;
+	font-style: oblique;
+	color: #777;
+}
  
 
 cmp-win-kupap .clsArticle {

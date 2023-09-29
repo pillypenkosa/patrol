@@ -82,6 +82,7 @@ class ComponentWinKupap {
 				<div class="organ">${ organ }</div>
 				<div class="title ${ titleBold }">${ k. title }</div>
 				${ sanction }
+				<div class="edited">Ред.: ${ k.edit ? ( k.edit.d + '.' + k.edit.m + '.' + k.edit.y ) : '' }</div>
 			</div>`;
 
 		});
