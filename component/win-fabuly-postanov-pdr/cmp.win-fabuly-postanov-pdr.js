@@ -31,8 +31,15 @@ class ComponentWinFabulyPostanovPdr {
 		}; 
  
  
+
+		cns( 'var', 'arrListPatrolPdr', arrListPatrolPdr );
+
+		let item = arrListPatrolPdr.find( k => k.id == '2_9_a' );
+
+
  
-		let html = name; 
+		let html = `... знач так! порушено п.<span class="pdr">${ item.chapter }.${ item.part }.${ item.paragraph }</span> ПДР, 
+		чим скоїв адміністративне правопорушення, передбачено ч.<span class="kupap">2</span> ст.<span class="kupap">122</span> КУпАП`; 
  
  
  

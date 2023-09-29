@@ -14,10 +14,20 @@ cmp-win-fabuly-postanov-pdr {
  
  
  
+
+
+
  
- 
- 
- 
- 
- 
+cmp-win-fabuly-postanov-pdr .pdr,
+cmp-win-fabuly-postanov-pdr .kupap {
+	font-weight: bold;
+}
+	cmp-win-fabuly-postanov-pdr .pdr{
+	 	color: #ff0;
+	}
+	 cmp-win-fabuly-postanov-pdr .kupap {
+	 	color: #0ff;
+	}
+	 
+
  

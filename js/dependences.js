@@ -17,7 +17,8 @@ const dependences = [
 
 	// масиви-списки з ЦЬОГО проекту ( свої ) -------------------------------------------------------------------------------------
 
-	{ arr: 'any' 	, }, 		// 	list\list.country.js
+	{ arr: 'patrol.pdr' 	, },
+	{ arr: 'patrol.kupap' 	, }, 	
 
 
 
@@ -39,7 +40,7 @@ const dependences = [
 	{ cmp: 'Win-Index' 					, regexp: /^index$/ 					, }, 	// regexp - url-маршрут (route) в адресному рядку
 	{ cmp: 'Win-Fabuly-Postanov-Pdr' 	, regexp: /^fabuly-postanov-pdr$/ 		, },
 	{ cmp: 'Win-Fabuly-Protokoliv-Pdr' 	, regexp: /^fabuly-protokoliv-pdr$/ 	, },
-
+	{ cmp: 'Win-Kupap' 					, regexp: /^kupap$/ 					, },
 
 
 
