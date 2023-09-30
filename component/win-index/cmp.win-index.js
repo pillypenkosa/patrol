@@ -55,7 +55,7 @@ class ComponentWinIndex {
 
 
 		setMeta({
-			title 			: name,
+			title 			: appProjectName + ' ' + appVersion,
 			description 	: 'Опис' + name,
 			//keywords 		: 'Ключові слова...' + name,
 			//image 			: 'img/pic/kartinka-' + name + '.jpg',

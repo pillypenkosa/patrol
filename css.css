@@ -13,6 +13,7 @@ html, body {
 	height: 100%;
 
 	/*font-family: "Roboto Regular";*/
+	font-family: Courier;
 
 }
 
@@ -24,7 +25,6 @@ body {
 	background: linear-gradient( to right, #111, #117 );
 */
 
-	/*font-family: Courier;*/
 	color: lime;
 }
 
