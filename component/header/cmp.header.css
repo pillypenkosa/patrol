@@ -1,3 +1,8 @@
+
+
+
+
+
 cmp-header {
 	/*
 	all: initial;
@@ -16,7 +21,7 @@ cmp-header {
 
 
 	background: linear-gradient( to top, #099, #009 );
-	font-family: Courier;
+	/*font-family: Courier;*/
 }
 
 

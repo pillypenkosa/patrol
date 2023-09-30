@@ -2,7 +2,7 @@ cmp-win-films {
 	all: unset;
 	display: block;
 
-	font-family: Courier;
+	/*font-family: Courier;*/
 	color: lime;
 }
 	cmp-win-films .clc {
