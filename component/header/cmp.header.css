@@ -3,20 +3,32 @@ cmp-header {
 	all: initial;
 	padding: 5px 10px;
 	background: linear-gradient( to right, #111, #115 );
+	border-radius: 10px;
 	*/
 
+	/*margin: 0 0 0 0;*/
 	
-	display: block;
+
+	position: fixed;
+
+	left: 0;
+	right: 0;
+
+
 	background: linear-gradient( to top, #099, #009 );
-	border-radius: 10px;
 	font-family: Courier;
-	font-size: 50px;
+}
+
+
+
+
+
+cmp-header .head {
+	display: flex;
+	justify-content: space-between;
+	font-size: 40px;
 	font-weight: bold;
 	color: #fff;
-
-
-
-
 }
 
 
@@ -24,9 +36,25 @@ cmp-header {
 
 
 
+cmp-header .title{
+	margin: 0 0 0 10px;
+}
 
 
 
+cmp-header .btn-menu {
+	margin: 0 10px 0 0;
+	font-size: 75%;
+	cursor: pointer;
+}
+
+
+
+cmp-header .nav-menu {
+	position: absolute;
+	right: 0;
+	font-size: 20px;
+}
 
 
 

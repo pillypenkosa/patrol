@@ -102,6 +102,8 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 #middle {
 
+	margin: 50px 0 0 0;
+
 	display: flex; 		/* для выравнивания блоков `aside` и `content` */
 	flex: 1 1 auto; 	/* для общего участия прижатия футера в макете ( растягивание и сжатие блока ) */
 /*
@@ -111,6 +113,10 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 	background: linear-gradient( to right, #000, #007 );
 }
 
+
+#middle #content {
+	width: 100%;
+}
 
 
 

@@ -11,7 +11,8 @@ class ComponentHeader {
 	static args = {};
 
 
-
+	// чи відображати меню 	
+	static tfMenu = true; 		// при першому завантаженні застосування - TRUE !!!
 
 
 	static html( objData = {} ) {
@@ -33,9 +34,16 @@ class ComponentHeader {
 			//'defer' 		: '',
 		};
 
-		let html = appProjectName + ' ' + appVersion;
 
 
+		//let html = appProjectName + ' ' + appVersion;
+		let html = `
+			<div class="head">
+				<div class="title">Патруль</div>
+				<div class="btn-menu" onclick="ComponentHeader.clc()">&#128660;</div>
+			</div>
+			<div class="nav-menu"></div>
+		`;
 
 		return { html, tagParam };
 	}
@@ -43,17 +51,29 @@ class ComponentHeader {
 
 
 
-	static clc( objData = {} ) {
-
-		let name = 'clc';
-		let ok = `\x1b[32m ok ${ this.name }.${ name }( ${ objData } ) `;
-		let err = `\x1b[31m err ${ this.name }.${ name }( ${ objData } ) `;
+	static clc() {
+		const name = this.name + '.html()';
 
 
+		//alert( name );
 
-		//alert( ok );
-		console.log( ok );
-		console.log( objData );
+
+		//let elem = document.querySelector( '.nav-menu' );
+
+		let elem = document.querySelector( '.nav-menu' );
+		if ( this.tfMenu ) {
+
+			elem.innerHTML = Component( 'Menu' );
+
+		} else
+			elem.innerHTML = '';
+
+
+		this.tfMenu = !this.tfMenu;
+
+		//console.log( elem );
+
+
 
 	}
 

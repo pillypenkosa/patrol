@@ -33,7 +33,24 @@ class ComponentWinIndex {
 
 
 
-		let html = 'Бажаю здоров\'я! ))';
+		//let html = '<div class="info">Бажаю здоров\'я! ))</div>';
+		let html = `
+			<div class="screen">
+
+
+
+
+				<div class="avatar"><img src="img/cars_sheriff.jpg"></div>
+
+				<div class="hi">Бажаю здоров\'я, <br/>любі друзі! )))</div>
+
+				<div class="book"><img src="img/book.png"></div>
+
+			</div>
+
+		`;
+
+
 
 
 
