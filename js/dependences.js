@@ -19,6 +19,7 @@ const dependences = [
 
 	{ arr: 'patrol.pdr' 	, },
 	{ arr: 'patrol.kupap' 	, }, 	
+	{ arr: 'patrol.fabuly' 	, }, 	
 
 
 
@@ -26,10 +27,15 @@ const dependences = [
 
 	// компоненти загальні --------------------------------------------------------------------------------------------------------
 
+	{ cmp: 'Fabuly-Pdr-Pic' 		, },
+	
 	{ cmp: 'Win-Err404' 			, },
 	{ cmp: 'Footer' 				, },
 	{ cmp: 'Menu' 					, },
 	{ cmp: 'Header' 				, },
+
+
+
 
 
 

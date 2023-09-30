@@ -15,8 +15,46 @@ cmp-win-fabuly-postanov-pdr {
  
  
 
+cmp-win-fabuly-postanov-pdr .menu-select-search-type {
+	display: flex;
+	justify-content: space-between;
+}
+	cmp-win-fabuly-postanov-pdr .menu-select-search-type .btn-search {
+		/*height: 70px;*/
+		/*width: 150px;*/
+
+		margin: 0 5px;
+		padding: 5px 0px;
+
+		flex-grow: 1;
+
+		border: 1px solid #777;
+		border-radius: 10px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center; /* Центр горизонталь */
+		align-items: center;     /* Центр вертикаль */
+		text-align: center;
+		font-size: 18px;
+		font-weight: bold;
+	}
+		cmp-win-fabuly-postanov-pdr .menu-select-search-type .btn-search:hover {
+			border-color: #aaa;
+			color: #fff;
+		}
 
 
+
+
+
+
+
+
+
+
+
+
+/*
  
 cmp-win-fabuly-postanov-pdr .pdr,
 cmp-win-fabuly-postanov-pdr .kupap {
@@ -31,3 +69,24 @@ cmp-win-fabuly-postanov-pdr .kupap {
 	 
 
  
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

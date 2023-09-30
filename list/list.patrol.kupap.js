@@ -158,12 +158,12 @@ const arrListPatrolKupap = [
 
 
 
-/*
-let objListAny = {};
-arrListAny.forEach( k => {
-	objListAny[ k.id ] = k;
+
+let objListPatrolKupap = {};
+arrListPatrolKupap.forEach( k => {
+	objListPatrolKupap[ k.id ] = k;
 });
-*/
+
 
 
 
