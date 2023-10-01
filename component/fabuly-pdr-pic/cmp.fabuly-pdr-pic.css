@@ -15,9 +15,24 @@ cmp-fabuly-pdr-pic {
  
  
  
- 
- 
- 
- 
+	cmp-fabuly-pdr-pic .each { 
+		display: inline-block;
+		margin: 1px;
+		height: 100px;
+		width: 100px;
+	} 
+		cmp-fabuly-pdr-pic .each .img img { 
+			height: 100%;
+			width: 100%;
+		} 
+			cmp-fabuly-pdr-pic .each .img img { 
+				height: 100%;
+				width: 100%;
+				border-radius: 10px;
+			} 
+
+
+
+
  
  

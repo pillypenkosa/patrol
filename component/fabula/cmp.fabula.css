@@ -1,0 +1,151 @@
+/* © 2023 DJS */ 
+ 
+ 
+ 
+cmp-fabula { 
+
+} 
+	cmp-fabula .clc { 
+		cursor: pointer; 
+	} 
+		cmp-fabula .clc:hover { 
+			color: yellow; 
+		} 
+ 
+ 
+
+
+
+
+
+cmp-fabula .modal {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	margin: 5px;
+	padding: 10px;
+	border-radius: 10px;
+	/*background-color: rgba( 255, 255, 255, .9 );*/
+	background-color: #fff;
+
+}
+
+	cmp-fabula .modal .fabula-body .img img {
+
+
+		border-radius: 10px;
+	}
+
+
+
+
+	cmp-fabula .modal .fabula-body .fabula-txt {
+		/*font-size: 120%;*/
+	}
+
+		cmp-fabula .modal .fabula-body .fabula-txt .fabula-action {
+			margin: 5px 0;
+			/*font-size: 120%;*/
+			font-weight: bold;
+		}
+
+
+
+
+	cmp-fabula .modal .fabula-body .vstup {
+		display: flex;
+	}
+		cmp-fabula .modal .fabula-body .vstup .info {
+			margin: 0 0 0 5px;
+		}
+
+
+
+
+
+
+
+ 
+	cmp-fabula .fabula-title {
+		margin: 0 0 15px 0;
+		text-align: center;
+		font-size: 200%;
+		font-weight: bold;
+	}
+
+
+
+
+
+
+
+
+
+
+cmp-fabula .back-close {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+cmp-win-fabuly .fabula {
+
+
+}
+
+
+
+
+cmp-win-fabuly .fabula .fabula-title {
+
+
+
+
+}
+
+
+ 
+ */
+
+
+
+
+ 
+ 
+ 

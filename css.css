@@ -25,7 +25,12 @@ body {
 	background: linear-gradient( to right, #111, #117 );
 */
 
-	color: lime;
+	/*color: lime;*/
+
+
+
+	background: linear-gradient( to right, #ccc, #ddd );
+	
 }
 
 app {
@@ -108,8 +113,12 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 
 
-	/*background: linear-gradient( to right, #555, #777 );*/
-	background-color: #000;
+	/*
+
+	background: linear-gradient( to top, #099, #009 );
+
+	*/
+	/*background-color: #000;*/
 }
 
 
@@ -124,12 +133,15 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 	или flex-grow: 1;
 */
 
-	background: linear-gradient( to right, #000, #007 );
+	/*background: linear-gradient( to right, #000, #007 );*/
 }
 
 
 #middle #content {
 	width: 100%;
+
+
+
 }
 
 

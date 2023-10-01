@@ -37,6 +37,13 @@ cmp-win-fabuly-postanov-pdr .menu-select-search-type {
 		text-align: center;
 		font-size: 18px;
 		font-weight: bold;
+
+		background: linear-gradient( to top, #099, #009 );
+		color: #fff;
+
+
+
+
 	}
 		cmp-win-fabuly-postanov-pdr .menu-select-search-type .btn-search:hover {
 			border-color: #aaa;
@@ -48,7 +55,23 @@ cmp-win-fabuly-postanov-pdr .menu-select-search-type {
 
 
 
+ 
+cmp-win-fabuly-postanov-pdr .title-pdr {
+	font-size: 120%;
+	font-weight: bold;
+}
+ 
+ 
 
+
+
+
+cmp-win-fabuly-postanov-pdr .win-fabuly-postanov-pdr-title {
+	margin: 10px 0 20px 0;
+	font-weight: bold;
+	font-size: 150%;
+	text-align: center;
+}
 
 
 

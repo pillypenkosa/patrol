@@ -64,25 +64,19 @@ class ComponentWinFabulyPostanovPdr {
 
 
  
-		let html = `<div class="menu-select-search-type">
+		let html = `${ Component( 'Fabula' ) }
+		<div class="win-fabuly-postanov-pdr-title">Фабули постанов ПДР</div>
+		<div class="menu-select-search-type">
 			<div class="btn-search" data-type="pic"onclick="ComponentWinFabulyPostanovPdr.clc( this )">Пошук фабул<br/>піктограмами</div>
 			<div class="btn-search" data-type="list"onclick="ComponentWinFabulyPostanovPdr.clc( this )">Пошук фабул<br/>списком</div>
 		</div>
 
 		<div class="menu-select-fabuly"></div>
-		<div class="fabula"></div>
-
-
+		<div class="modal-fabula"></div>
 
 
 		`;
 
-
-
-
-
-
- 
 		setMeta({ 
 			title 			: name, 
 			description 	: 'Опис...', 
@@ -122,10 +116,14 @@ class ComponentWinFabulyPostanovPdr {
  
  
 
-	static insertFabula( html ) {
-		document.querySelector( 'cmp-win-fabuly-postanov-pdr .fabula' ).innerHTML = html;
-	}
 
+
+
+/*
+	static insertFabula( html ) {
+		document.querySelector( 'cmp-win-fabuly-postanov-pdr .fabula' ).innerHTML = Component( 'Fabula',  );
+	}
+*/
 
 
 
