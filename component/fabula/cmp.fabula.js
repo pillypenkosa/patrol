@@ -83,12 +83,20 @@ class ComponentFabula {
 
 
 
-
+		const kupapID = data.kupap.art + '_' + data.kupap.part;
 
 
 
 					//<div>${ data.id }</div>
 					//		<div>КУпАП: <b>${ data.kupap.art }/${ data.kupap.part }</b></div>
+
+
+		const htmlPartKupap = `<span class="item-border part-kupap">ч.<b>${ objListPatrolKupap[ kupapID ].part }</b> ст.<b>${ objListPatrolKupap[ kupapID ].article }</b></span>`;
+
+		const htmlItemPdr = `<span class="item-border item-pdr">${ data.pdr }</span>`;
+
+
+
 
 		let html = `
 			<div class="modal">
@@ -98,19 +106,14 @@ class ComponentFabula {
 				<div class="fabula-body">
 					<div class="vstup">
 						<div class="img">
-							<img src="img/fabuly/${ data.img }.jpg" alt="">
+							<img src="img/fabuly/${ data.img ? data.img : data.id }.jpg" alt="">
 						</div>
 						<div class="info">
-							<div>ПДР: <b>${ data.pdr[ 0 ] }</b></div>
+							<div>ПДР: ${ htmlItemPdr }</div>
 
-
-							
-							<div>КУпАП: ст.<b>${ objListPatrolKupap[ data.kupap.id ].article }</b> ч.<b>${ objListPatrolKupap[ data.kupap.id ].part }</b></div>
-							<div><b>${ objListPatrolKupap[ data.kupap.id ].min }</b> мінімумів</div>
-							<div><b>${ objListPatrolKupap[ data.kupap.id ].min * 17 }</b> грн</div>
-
-
-
+							<div>КУпАП: ${ htmlPartKupap }</div>
+							<div><span class="item-border min"><b>${ objListPatrolKupap[ kupapID ].min }</b></span> мінімумів</div>
+							<div><span class="item-border penalty"><b>${ objListPatrolKupap[ kupapID ].min * 17 }</b> грн</span></div>
 
 						</div>
 					</div>
@@ -118,11 +121,11 @@ class ComponentFabula {
 
 
 					<div class="fabula-txt">
-						<div>1.10.2023 р. о 12:00 в м.Харків, вул.Сумська, біля буд.38а, водій Шумахер Михайло Побатькович, керуючи ТЗ «Ferrari 248 F1» д.н.з. АХ 1234 АВ</div>
+						<div>1.10.2023 р. о 12:00 в м.Харків, вул.Сумська, біля буд.38а, водій Шумахер Михайло Побатькович, <b>керуючи</b> ТЗ «Ferrari 248 F1» д.н.з. АХ 1234 АВ</div>
 
 						<div class="fabula-action">${ data.fabula },</div>
 						
-						<div>чим порушив п.<b>${ data.pdr[ 0 ] }</b> ПДР, чим скоїв адміністративне правопорушення, передбачене ч.<b>${ data.kupap.part }</b> ст.<b>${ data.kupap.art }</b> КУпАП.</div>
+						<div>чим порушив п.${ htmlItemPdr } ПДР, чим скоїв адміністративне правопорушення, передбачене ${ htmlPartKupap } КУпАП.</div>
 					</div>
 
 

@@ -54,6 +54,35 @@ cmp-fabula .modal {
 
 
 
+	cmp-fabula .modal .fabula-body .item-border {
+			padding: 0 10px;
+			border-radius: 5px;
+			font-weight: bold;
+			color: #fff;
+	}
+
+	cmp-fabula .modal .fabula-body .item-pdr {
+		background-color: #009;
+	}
+
+	cmp-fabula .modal .fabula-body .part-kupap {
+		background-color: #090;
+	}
+
+	cmp-fabula .modal .fabula-body .min {
+		background-color: #09f;
+	}
+
+
+	cmp-fabula .modal .fabula-body .penalty {
+		background-color: #f00;
+	}
+
+
+
+
+
+
 
 	cmp-fabula .modal .fabula-body .vstup {
 		display: flex;
@@ -61,6 +90,9 @@ cmp-fabula .modal {
 		cmp-fabula .modal .fabula-body .vstup .info {
 			margin: 0 0 0 5px;
 		}
+			cmp-fabula .modal .fabula-body .vstup .info div {
+				margin: 0 0 5px 0;
+			}
 
 
 

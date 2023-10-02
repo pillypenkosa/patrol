@@ -38,7 +38,7 @@ class ComponentFabulyPdrPic {
 
 			html += `<div class="each" data-id="${ k.id }" onclick="ComponentFabulyPdrPic.clc( this )">
 				<div class="img">
-					<img src="img/fabuly/${ k.img }.jpg" alt="">
+					<img src="img/fabuly/${ k.img ? k.img : k.id }.jpg" alt="">
 				</div>
 			</div>`;
 		});
