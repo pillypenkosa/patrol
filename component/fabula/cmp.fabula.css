@@ -54,6 +54,23 @@ cmp-fabula .modal {
 
 
 
+	cmp-fabula .modal .fabula-body .fabula-txt .no-fabula {
+
+		font-style: oblique;
+		background-color: #f00;
+
+	}
+
+
+
+
+
+
+
+
+
+
+
 	cmp-fabula .modal .fabula-body .item-border {
 			padding: 0 10px;
 			border-radius: 5px;
@@ -64,6 +81,15 @@ cmp-fabula .modal {
 	cmp-fabula .modal .fabula-body .item-pdr {
 		background-color: #009;
 	}
+	cmp-fabula .modal .fabula-body .sign {
+		background-color: #909;
+	}
+	cmp-fabula .modal .fabula-body .marking {
+		background-color: #333;
+	}
+
+
+
 
 	cmp-fabula .modal .fabula-body .part-kupap {
 		background-color: #090;
@@ -84,6 +110,12 @@ cmp-fabula .modal {
 
 
 
+
+
+
+
+
+
 	cmp-fabula .modal .fabula-body .vstup {
 		display: flex;
 	}
@@ -96,6 +128,24 @@ cmp-fabula .modal {
 
 
 
+
+
+
+
+
+/*
+	cmp-fabula .modal .fabula-body .links {
+		margin: 50px 0 0 0;
+		cursor: pointer;
+	}
+
+	
+		cmp-fabula .modal .fabula-body .links .link {
+			color: #ff0;
+			background-color: red;
+		}
+
+*/
 
 
 
