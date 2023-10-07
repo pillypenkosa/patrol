@@ -65,7 +65,7 @@ class ComponentMenu {
 	static clc( elem ) { 
 		const name = this.name + '.clc()'; 
  
-		cns( 'var', 'data', elem.dataset.href ); 
+		//cns( 'var', 'data', elem.dataset.href ); 
 
 
 		ComponentHeader.clc();

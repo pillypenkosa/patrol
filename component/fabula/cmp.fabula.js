@@ -195,12 +195,19 @@ class ComponentFabula {
 
 
 
+		let edited = data.edit ? `<div class="edited">Оновлено: ${ data.edit.d }.${ data.edit.m }.${ data.edit.y }</div>` : '';
+
 
 
 
 		let html = `
 			<div class="modal">
-				<div class="back-close" onclick="ComponentFabula.close()"><<<</div>
+				<div class="back-close back" onclick="ComponentFabula.close()">
+					<img src="img/pic/arrow-left.png" alt="close">
+				</div>
+				<div class="back-close close" onclick="ComponentFabula.close()">
+					<img src="img/pic/cross.png" alt="close">
+				</div>
 
 				<div class="fabula-title">Фабула</div>
 				<div class="fabula-body">
@@ -223,6 +230,8 @@ class ComponentFabula {
 						<div class="fabula-action">${ htmlFabula },</div>						
 						<div>чим порушив п.${ htmlItemPdr } ПДР${ htmlMarkingFabula }, чим скоїв адміністративне правопорушення, передбачене ${ htmlPartKupap } КУпАП.</div>
 					</div>
+
+					${ edited }
 				</div>
 			</div>
 		`;

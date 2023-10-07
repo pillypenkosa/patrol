@@ -88,7 +88,7 @@ class ComponentWinFabulyPostanovPdr {
 	static clcSelectTypePDR( data ) {
 		const name = this.name + '.clcSelectTypePDR()'; 
 
-		cns( 'var', 'data', data.value );
+		//cns( 'var', 'data', data.value );
 
 		document.querySelector( this.tag + ' .menu-select-fabuly' ).innerHTML = this.showFabuly( data.value );
 	}
@@ -103,8 +103,8 @@ class ComponentWinFabulyPostanovPdr {
 		const fooName = this.name + '.showFabuly()'; 
 
 
-		cns( 'var', 'fooName', fooName );
-		cns( 'var', 'txt', txt );
+		//cns( 'var', 'fooName', fooName );
+		//cns( 'var', 'txt', txt );
 
 
 
@@ -145,17 +145,7 @@ class ComponentWinFabulyPostanovPdr {
 		});
 
 
-
-
-
 		return htmlSelectFabula;
-
-
-
-
-
-
-
 	}
 
 

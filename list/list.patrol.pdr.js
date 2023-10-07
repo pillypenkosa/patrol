@@ -321,6 +321,10 @@ const arrListPatrolPdr = [
 		title: [ 'Проїзд без зупинки заборонено', ],
 	},
 	{
+		id: 'sign_2.5', sign: '2', part: '5', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/2.5',
+		title: [ 'Перевага зустрічного руху', ],
+	},
+	{
 		id: 'sign_3.1', sign: '3', part: '1', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.1',
 		title: [ 'Рух заборонено', ],
 	},
@@ -333,6 +337,14 @@ const arrListPatrolPdr = [
 		title: [ 'В\'їзд заборонено', ],
 	},
 	{
+		id: 'sign_3.25', sign: '3', part: '25', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.25',
+		title: [ 'Обгін заборонено', ],
+	},
+	{
+		id: 'sign_3.29', sign: '3', part: '29', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.29',
+		title: [ 'Обмеження максимальної швидкості', ],
+	},
+	{
 		id: 'sign_3.34', sign: '3', part: '34', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.34',
 		title: [ 'Зупинку заборонено', ],
 	},
@@ -340,6 +352,28 @@ const arrListPatrolPdr = [
 		id: 'sign_3.35', sign: '3', part: '35', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.35',
 		title: [ 'Стоянку заборонено', ],
 	},
+	{
+		id: 'sign_3.41', sign: '3', part: '41', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.41',
+		title: [ 'Контроль', ],
+	},
+
+
+
+
+
+
+
+
+	{
+		id: 'sign_3.41', sign: '3', part: '41', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.41',
+		title: [ 'Контроль', ],
+	},
+
+
+
+
+
+
 
 
 
@@ -348,6 +382,10 @@ const arrListPatrolPdr = [
 	id: 'sign_5', sign: '5', 
 	title: [ 'Інформаційно-вказівні знаки', ],
 },
+	{
+		id: 'sign_5.16', sign: '5', part: '16', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/5.16',
+		title: [ 'Напрямки руху по смугах', ],
+	},
 	{
 		id: 'sign_5.38.1', sign: '5', part: '38', paragraph: '1', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/5.38.1',
 		title: [ 'Пішохідний перехід', ],

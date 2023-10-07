@@ -103,7 +103,7 @@ function Component( txt, obj = {} ) { 		// txt - назва компонента
 
 
 	// допоміжна приблуда // можно прибрати
-	cns( 'var', 'задіяно компонент', className + '.html()' );
+	//cns( 'var', 'задіяно компонент', className + '.html()' );
 
 	return '<' + tagName + ' ' + tagParam + '>' + ( objIni.html ? objIni.html : '' ) + '</' + tagName + '>';
 }

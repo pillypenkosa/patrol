@@ -37,10 +37,13 @@ class ComponentHeader {
 
 
 		//let html = appProjectName + ' ' + appVersion;
+		//&#128660;
 		let html = `
 			<div class="head">
 				<div class="title">Патруль</div>
-				<div class="btn-menu" onclick="ComponentHeader.clc()">&#128660;</div>
+				<div class="btn-menu" onclick="ComponentHeader.clc()">
+					<img src="img/pic/menu.png" alt="close">
+				</div>
 			</div>
 			<div class="nav-menu"></div>
 		`;

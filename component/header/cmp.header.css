@@ -48,8 +48,16 @@ cmp-header .title{
 
 
 cmp-header .btn-menu {
-	margin: 0 10px 0 0;
-	font-size: 75%;
+	/*margin: 0 10px 0 0;*/
+	/*font-size: 75%;*/
+
+	position: relative;
+
+	top: 5px;
+	right: 5px;
+
+
+
 	cursor: pointer;
 }
 
