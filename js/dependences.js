@@ -27,12 +27,12 @@ const dependences = [
 
 	// компоненти загальні --------------------------------------------------------------------------------------------------------
 
+	//{ cmp: 'Fabuly-Pdr-Pic' 		, },
+	//{ cmp: 'Search-Fabula' 			, },
 
 	{ cmp: 'Fabula' 				, },
 
-	{ cmp: 'Fabuly-Pdr-Pic' 		, },
 
-	//{ cmp: 'Search-Fabula' 			, },
 	{ cmp: 'Win-Err404' 			, },
 	{ cmp: 'Footer' 				, },
 	{ cmp: 'Menu' 					, },

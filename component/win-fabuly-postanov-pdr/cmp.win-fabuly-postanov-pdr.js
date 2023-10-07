@@ -9,6 +9,7 @@ class ComponentWinFabulyPostanovPdr {
  
  
 	static args = {}; 
+	static tag = 'cmp-win-fabuly-postanov-pdr'; 
  
  
  
@@ -31,54 +32,26 @@ class ComponentWinFabulyPostanovPdr {
 		}; 
  
  
-
-		cns( 'var', 'arrListPatrolPdr', arrListPatrolPdr );
+		//cns( 'var', 'arrListPatrolPdr', arrListPatrolPdr );
 
 		let item = arrListPatrolPdr.find( k => k.id == '2_9_a' );
 
 
-/*
-
-			<div class="each">
-				<div class="img">
-					<img src="img/fabuly/traffic_light_red.jpg" alt="">
-				</div>
-
-			</div>
+		let htmlOptionPdrType = '';
+		arrListPatrolFabulyType.forEach( k => {
+			htmlOptionPdrType += `<option value="${ k.id }">${ k.title }</option>`;
+		});
 
 
 
-
-
-
-
-
-
-		... знач так! порушено п.<span class="pdr">${ item.chapter }.${ item.part }.${ item.paragraph }</span> ПДР, 
-		чим скоїв адміністративне правопорушення, передбачено ч.<span class="kupap">2</span> ст.<span class="kupap">122</span> КУпАП`; 
- 
- 
-
-
-*/
-
-
- 
 		let html = `${ Component( 'Fabula' ) }
-		<div class="win-fabuly-postanov-pdr-title">Фабули постанов ПДР</div>
-		<div class="menu-select-search-type">
-			<div class="btn-search" data-type="pic"onclick="ComponentWinFabulyPostanovPdr.clc( this )">Пошук фабул<br/>піктограмами</div>
-			<div class="btn-search" data-type="list"onclick="ComponentWinFabulyPostanovPdr.clc( this )">Пошук фабул<br/>списком</div>
-		</div>
-
-		<div class="menu-select-fabuly"></div>
-		<div class="modal-fabula"></div>
-
-
+			<div class="win-fabuly-postanov-pdr-title">Фабули постанов ПДР</div>
+			<select class="select-offense-type" onchange="ComponentWinFabulyPostanovPdr.clcSelectTypePDR( this )">${ htmlOptionPdrType }</select>
+			<div class="menu-select-fabuly">${ ComponentWinFabulyPostanovPdr.showFabuly( 'all' ) }</div>
 		`;
 
 		setMeta({ 
-			title 			: name, 
+			title 			: 'Фабули постанов ПДР', 
 			description 	: 'Опис...', 
 			//image 		: '', 
 		}); 
@@ -95,35 +68,97 @@ class ComponentWinFabulyPostanovPdr {
 	static clc( data ) { 
 		const name = this.name + '.clc()'; 
  
-		cns( 'var', 'data.dataset.type', data.dataset.type ); 
 
+		let objFabula = arrListPatrolFabuly.find( k => {
 
-		let div = document.querySelector( 'cmp-win-fabuly-postanov-pdr .menu-select-fabuly' );
+			if ( k.id == data.dataset.id )
+				return true;
+		});
 
+		//cns( 'var', 'arrListPatrolFabuly[ data.dataset.id ]', arrListPatrolFabuly ); 
+		//cns( 'var', 'fabula', objFabula ); 
 
-
-
-		if ( data.dataset.type == 'list' ) 
-			div.innerHTML = 'Списком';
-		
-
-		if ( data.dataset.type == 'pic' ) 
-			div.innerHTML = Component( 'Fabuly-Pdr-Pic' );
-		
-		//alert();
+		//objListPatrolKupap[ data.dataset.id ];
+		ComponentFabula.insFabula( objFabula );
 
 	} 
  
  
 
+	static clcSelectTypePDR( data ) {
+		const name = this.name + '.clcSelectTypePDR()'; 
 
+		cns( 'var', 'data', data.value );
 
-
-/*
-	static insertFabula( html ) {
-		document.querySelector( 'cmp-win-fabuly-postanov-pdr .fabula' ).innerHTML = Component( 'Fabula',  );
+		document.querySelector( this.tag + ' .menu-select-fabuly' ).innerHTML = this.showFabuly( data.value );
 	}
-*/
+
+
+
+
+
+
+
+	static showFabuly( txt ) {
+		const fooName = this.name + '.showFabuly()'; 
+
+
+		cns( 'var', 'fooName', fooName );
+		cns( 'var', 'txt', txt );
+
+
+
+		let selectedFabuly = [];
+
+		if ( txt == 'all' ) 
+			selectedFabuly = arrListPatrolFabuly.filter( k => true );
+
+		else 
+			selectedFabuly = arrListPatrolFabuly.filter( k => k.type == txt );
+
+
+
+
+		let htmlSelectFabula = ''; 
+		selectedFabuly.forEach( k => {
+			let sign = k.sign ? `<div><b>Знак: ${ k.sign }</b></div>` : '';
+			let marking = k.marking ? `<div><b>Розмітка: ${ k.marking }</b></div>` : '';
+			let descr = k.descr ? `<div class="descr">${ k.descr }...</div>` : '';
+			//let offenseType = k.type ? `<div class="offense-type type-${ k.type }">${ objListPatrolFabulyType[ k.type ].title }</div>` : '';
+			//${ offenseType }
+
+
+
+			htmlSelectFabula += `<div class="each" data-id="${ k.id }" onclick="ComponentWinFabulyPostanovPdr.clc( this )">
+				<div class="img">
+					<img src="img/fabuly/${ k.img ? k.img : k.id }.jpg" alt="">
+				</div>
+
+				<div class="info">
+					<div><b>КУпАП</b>: ст.<b>${ k.kupap.art }</b> ч.<b>${ k.kupap.part }</b></div>
+					<div><b>ПДР</b>: <b>${ k.pdr }</b></div>
+					${ sign }
+					${ marking }
+					${ descr }
+				</div>
+			</div>`;
+		});
+
+
+
+
+
+		return htmlSelectFabula;
+
+
+
+
+
+
+
+	}
+
+
 
 
 
