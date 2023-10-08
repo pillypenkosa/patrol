@@ -40,7 +40,7 @@ class ComponentWinIndex {
 
 
 
-				<div class="avatar"><img src="img/cars_sheriff.jpg"></div>
+				<div class="avatar"><img src="img/cars_sheriff.jpg" alt="Тачки. Шериф"></div>
 
 				<div class="hi">Бажаю здоров\'я, <br/>любі друзі! )))</div>
 
@@ -56,9 +56,9 @@ class ComponentWinIndex {
 
 		setMeta({
 			title 			: appProjectName + ' ' + appVersion,
-			description 	: 'Опис' + name,
+			description 	: 'Фабули. Шпаргалка',
 			//keywords 		: 'Ключові слова...' + name,
-			//image 			: 'img/pic/kartinka-' + name + '.jpg',
+			image 			: 'img/cars_sheriff.jpg',
 			//url 			: 'url/any/there/' + name,
 			//type 			: 'Тіпі-тіп ' + name,
 			//site_name 		: 'Назва сайту, мабуть стале значення... ' + name,
