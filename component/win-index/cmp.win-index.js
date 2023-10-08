@@ -55,7 +55,7 @@ class ComponentWinIndex {
 
 
 		setMeta({
-			title 			: appProjectName + ' ' + appVersion,
+			title 			: 'Фабули. Шпаргалка',
 			description 	: 'Фабули. Шпаргалка',
 			//keywords 		: 'Ключові слова...' + name,
 			image 			: 'img/cars_sheriff.jpg',
