@@ -77,9 +77,7 @@ class ComponentFabula {
 	static close( data ) { 
 		const name = this.name + '.clc()'; 
 
-
 		document.querySelector( 'cmp-fabula' ).innerHTML = '';
- 
 		//cns( 'var', 'data', data ); 
 	} 
  
@@ -93,42 +91,74 @@ class ComponentFabula {
 
 
 	static insFabula( data ) { 
-		const name = this.name + '.clc()'; 
+		const fooName = this.name + '.clc()'; 
  
-		//cns( 'var', 'name', name ); 
+		//cns( 'var', 'fooName', fooName ); 
 		//cns( 'var', 'data', data ); 
 
-
-
-		const kupapID = data.kupap.art + '_' + data.kupap.part;
-
-
-
-					//<div>${ data.id }</div>
-					//		<div>КУпАП: <b>${ data.kupap.art }/${ data.kupap.part }</b></div>
-
-
-		const htmlPartKupap 	= `<span class="item-border part-kupap">ч.<b>${ objListPatrolKupap[ kupapID ].part }</b> ст.<b>${ objListPatrolKupap[ kupapID ].article }</b></span>`;
+		const kupapID 			= data.kupap.art + '_' + data.kupap.part;
+		const htmlPartKupap 	= this.paintKupap( objListPatrolKupap[ kupapID ].article, objListPatrolKupap[ kupapID ].part, objListPatrolKupap[ kupapID ].href ? objListPatrolKupap[ kupapID ].href : '' );
+			 	
 		const htmlItemPdr  		= `<span class="item-border item-pdr">${ data.pdr }</span>`;
 
 		let htmlMarkingInfo  	= data.marking ? `Розмітка: <span class="item-border item-pdr">${ data.marking }</span>` : '';
 		let htmlMarkingFabula 	= data.marking ? `(розмітка <span class="item-border item-pdr">${ data.marking }</span>)` : '';
 
-		//let htmlSign 			= data.sign ? `Знак: <span class="item-border sign">${ data.sign }</span>` : '';
-
-
-		
-
-		//let htmlSignBorder 	= '';
-		//let htmlInfoSign 	= '';
-
 		let txtSignNumFull	 	= '';
 		let htmlSignNumBorder 	= '';
 		let htmlInfoSign 		= '';
-
 		let txtSignNameFull	 	= '';
-
 		let htmlFabula 			= '';
+
+
+
+		// розглядають справу
+		let htmlOrgan = '';
+		if ( objListPatrolKupap[ kupapID ].organ) 
+			 htmlOrgan = `<div class="organ">Розглядають справу: <b>${ objListOrgan[ objListPatrolKupap[ kupapID ].organ ] }</b></div>`;
+
+
+
+		let htmlRepeat 		= '';
+		let objKupapRepeat 	= {};
+
+
+		if ( objListPatrolKupap[ kupapID ].repeat ) {
+
+			objKupapRepeat = arrListPatrolKupap.find( k => k.id == objListPatrolKupap[ kupapID ].repeat );
+
+			//let minKupap = objKupapRepeat.min ? : '';
+			let htmlMinMax = `<span class="item-border min"><b>${ objKupapRepeat.min }</b></span>`;
+			let htmlPenalty = `<span class="item-border penalty"><b>${ objKupapRepeat.min * livingWage }</b></span>`;
+
+			if ( objKupapRepeat.max ) {
+				htmlMinMax += `-<span class="item-border min"><b>${ objKupapRepeat.max }</b></span>`;
+				htmlPenalty += `-<span class="item-border penalty"><b>${ objKupapRepeat.max * livingWage }</b></span>`;
+			}
+		
+			htmlMinMax += ' мінімумів';
+			htmlPenalty += ' грн';
+
+
+
+			//const htmlPartKupap 	= ``;
+
+			htmlRepeat = `<div class="reapeat">
+				<div class="repeat-warning">Повторність:</div>
+				<div>КУпАП: ${ this.paintKupap( objKupapRepeat.article, objKupapRepeat.part, objKupapRepeat.href ) }</div>
+				<div>${ htmlMinMax }</div>
+				<div>Штраф: ${ htmlPenalty }</div>
+				<div>Розглядають: <b>${ objListOrgan[ objKupapRepeat.organ ] }</b></div>
+			</div>`;
+		}
+
+
+		//cns( 'var', 'fooName', fooName ); 
+		//cns( 'var', 'objKupapRepeat', objKupapRepeat );
+
+
+
+
 
 		//let linkPdr 			= '';
 		//let linkSign 			= '';
@@ -146,24 +176,6 @@ class ComponentFabula {
 			htmlInfoSign = 'Знак: ' + htmlSignNumBorder;
 			txtSignNameFull = this.paintSign( this.getFullNameSign( data.sign ));
 			//cns( 'var', 'txtSignNameFull', txtSignNameFull );
-
-
-
-
-			//if ( objListPatrolPdr[ 'sign_' + data.sign ].href_sign ) 
-				
-
-			//linkPdr = objListPatrolPdr[ 'sign_' + data.sign ].href_sign ? `<div class="link link-pdr" data-href="${ objListPatrolPdr[ 'sign_' + data.sign ].href_sign }" onclick="ComponentFabula.clcLink( this )">${ this.paintSign( 'Знак ' + txtSignNumFull ) }</div>` : '';
-			
-
-
-
-			//linkSign = objListPatrolPdr[ 'sign_' + data.sign ].href_sign ? `<div class="link link-sign" data-href="${ objListPatrolPdr[ 'sign_' + data.sign ].href_sign }" onclick="ComponentFabula.clcLink( this )">${ this.paintSign( 'Знак ' + txtSignNumFull ) }</div>` : '';
-
-
-
-			//objListPatrolPdr[ 'sign_' + data.sign ].href_sign;
-
 		}
 
 
@@ -180,11 +192,7 @@ class ComponentFabula {
 			htmlFabula = data.fabula.replace( /{sign}/g, txtSignNameFull );
 
 		} else 
-			htmlFabula = '<span class="item-border no-fabula">вже приїхав без фабули ((( </span>';
-
-
-
-
+			htmlFabula = '<span class="item-border no-fabula">а ось тут могла бути Ваша реклама (((</span>';
 
 
 		if ( data.marking ) {
@@ -193,9 +201,22 @@ class ComponentFabula {
 		}
 
 
-
-
 		let edited = data.edit ? `<div class="edited">Оновлено: ${ data.edit.d }.${ data.edit.m }.${ data.edit.y }</div>` : '';
+
+
+		let txtPerson = '';
+		let txtAction = ' '; 		// залишити ПРОБІЛ
+		if ( data.type == 'pedestrian' ) {
+
+			txtPerson = 'пішохід';
+			//txtAction = ' '; 		// залишити ПРОБІЛ
+
+		} else {
+
+			txtPerson = 'водій';
+			txtAction = ', керуючи ТЗ «Ferrari 248 F1» д.н.з. АХ 1234 АВ';
+		}
+
 
 
 
@@ -221,16 +242,18 @@ class ComponentFabula {
 							<div>${ htmlMarkingInfo }</div>
 							<div>КУпАП: ${ htmlPartKupap }</div>
 							<div><span class="item-border min"><b>${ objListPatrolKupap[ kupapID ].min }</b></span> мінімумів</div>
-							<div><span class="item-border penalty"><b>${ objListPatrolKupap[ kupapID ].min * 17 }</b> грн</span></div>
+							<div><span class="item-border penalty"><b>${ objListPatrolKupap[ kupapID ].min * livingWage }</b> грн</span></div>
 						</div>
 					</div>
 					
 					<div class="fabula-txt">
-						<div>1.10.2023 р. о 12:00 в м.Харків, вул.Сумська, біля буд.38а, водій Шумахер Михайло Побатькович, <b>керуючи</b> ТЗ «Ferrari 248 F1» д.н.з. АХ 1234 АВ</div>
+						<div>1.10.2023 р. о 12:00 в м.Харків, вул.Сумська, біля буд.38а ${ txtPerson } Шумахер Михайло Побатькович${ txtAction }</div>
 						<div class="fabula-action">${ htmlFabula },</div>						
 						<div>чим порушив п.${ htmlItemPdr } ПДР${ htmlMarkingFabula }, чим скоїв адміністративне правопорушення, передбачене ${ htmlPartKupap } КУпАП.</div>
+						<div>---</div>
+						${ htmlOrgan }
 					</div>
-
+					${ htmlRepeat }
 					${ edited }
 				</div>
 			</div>
@@ -294,6 +317,43 @@ class ComponentFabula {
 
 
 
+		
+
+
+
+
+	// фарбувати текст статті КУпАП
+	static paintKupap( art, part, href ) { 	// signID - txt
+		const fooName = this.name + '.paintKupap()'; 
+
+		//cns( 'var', 'fooName', fooName );
+
+		let clsPointer = '';
+
+
+		let htmlHref = '';
+		if ( href ) {
+			htmlHref = `data-href="${ href }" onclick="${ this.name }.linkTo( this )"`;
+			clsPointer = 'link-pointer'
+		}
+		
+		return `<span class="item-border part-kupap ${ clsPointer }" ${ htmlHref }>ч.<b>${ art }</b> ст.<b>${ part }</b></span>`;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -302,8 +362,8 @@ class ComponentFabula {
 	static paintSign( txt = '' ) { 	// signID - txt
 		const name = this.name + '.txtBorderSign()'; 
 
-		cns( 'var', 'name', name );
-		cns( 'var', 'txt', txt );
+		//cns( 'var', 'name', name );
+		//cns( 'var', 'txt', txt );
 
 		return '<span class="item-border sign">' + txt + '</span>';
 	}
@@ -317,73 +377,31 @@ class ComponentFabula {
 
 
 
-	static txtFabulaSign( txt ) {
-
-
-		//cns( 'var', 'txt', txt );
 
 
 
 
-		let id = 'sign_' + txt;
-		//cns( 'var', 'id', id );
-
-
-		let txtSign = '';
-		if ( objListPatrolPdr[ id ] ) {
-
-			if ( objListPatrolPdr[ id ].sign ) 
-				txtSign += objListPatrolPdr[ id ].sign;
-			
-			if ( objListPatrolPdr[ id ].part ) 
-				txtSign += '.' + objListPatrolPdr[ id ].part;
-			
-			if ( objListPatrolPdr[ id ].paragraph ) 
-				txtSign += '.' + objListPatrolPdr[ id ].paragraph;
-			
-			if ( objListPatrolPdr[ id ].item ) 
-				txtSign += '.' + objListPatrolPdr[ id ].item;
-
-
-			if ( txtSign ) 
-				txtSign = '<span class="item-border sign">' + txtSign + '</span>';
-
-
-			if ( objListPatrolPdr[ id ].txt ) 
-				txtSign += ' «' + objListPatrolPdr[ id ].txt + '»';
 
 
 
 
-		}
+	// перехід за посиланням на інші сайти
+	static linkTo( data ) {
+		const fooName = this.name + '.linkTo()'; 
 
+		//cns( 'var', 'fooName', fooName );
+		//cns( 'var', 'data.href', data.dataset.href );
 
-		//cns( 'var', 'objListPatrolPdr[ id ]', objListPatrolPdr[ id ] );
-
-		//cns( 'var', 'txtSign', txtSign );
-
-
-
-
-/*
-		cns( 'var', 'sign_txt', 'sign_' + txt );
-		cns( 'var', 'objListPatrolPdr', objListPatrolPdr );
-		cns( 'var', 'objListPatrolPdr[ sign_3.21 ]', objListPatrolPdr[ 'sign_3.21' ] );
-		cns( 'var', 'objListPatrolPdr[ sign_3.21 ].sign', objListPatrolPdr[ 'sign_3.21' ].sign );
-		cns( 'var', 'objListPatrolPdr[ sign_3.21 ].part', objListPatrolPdr[ 'sign_3.21' ].part );
-*/
-
-
-		//cns( 'var', 'objListPatrolPdr[ id ].part', objListPatrolPdr[ id ] );
-
-
-		
-
-
-
-
-		return 'не виконав вимогу дорожнього знаку ' + txtSign;
+		window.open( data.dataset.href );
 	}
+
+
+
+
+
+
+
+
 
 
 

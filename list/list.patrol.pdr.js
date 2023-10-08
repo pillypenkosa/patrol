@@ -115,6 +115,17 @@ const arrListPatrolPdr = [
 
 
 
+{
+	id: '4', chapter: '4',
+	txt: [ 'Обов\'язки і права пішоходів', ],
+},
+	{
+		id: '4.7', chapter: '4', part: '7',
+		txt: [ 'Пішоходи повинні переходити проїзну частину по пішохідних переходах, у тому числі підземних і надземних, а у разі їх відсутності — на перехрестях по лініях тротуарів або узбіч.', ],
+	},
+
+
+
 
 
 
@@ -231,7 +242,7 @@ const arrListPatrolPdr = [
 
 {
 	id: '15', chapter: '15',
-	txt: [ '', ],
+	txt: [ 'Зупинка і стоянка', ],
 },
 	{
 		id: '15.9', chapter: '15', part: '9',
@@ -245,6 +256,24 @@ const arrListPatrolPdr = [
 			id: '15.9.е', chapter: '15', part: '9', paragraph: 'е',
 			txt: [ 'Ближче 30 м від посадкових майданчиків для зупинки маршрутних ТЗ, а коли їх немає — ближче 30 м від дорожнього знака такої зупинки з обох боків', ],
 		},
+
+
+
+
+
+
+{
+	id: '20', chapter: '20',
+	txt: [ 'Рух через залізничні переїзди', ],
+},
+	{
+		id: '20.', chapter: '20', part: '',
+		txt: [ 'Зупинка забороняється:', ],
+	},
+
+
+
+
 
 
 
@@ -313,9 +342,6 @@ const arrListPatrolPdr = [
 	id: 'sign_3', sign: '3',
 	txt: [ 'Заборонні знаки', ],
 },
-
-
-
 	{
 		id: 'sign_2.2', sign: '2', part: '2', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/2.2',
 		title: [ 'Проїзд без зупинки заборонено', ],
@@ -337,6 +363,14 @@ const arrListPatrolPdr = [
 		title: [ 'В\'їзд заборонено', ],
 	},
 	{
+		id: 'sign_3.22', sign: '3', part: '22', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.22',
+		title: [ 'Поворот праворуч заборонено', ],
+	},
+	{
+		id: 'sign_3.23', sign: '3', part: '23', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.23',
+		title: [ 'Поворот ліворуч заборонено', ],
+	},
+	{
 		id: 'sign_3.25', sign: '3', part: '25', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.25',
 		title: [ 'Обгін заборонено', ],
 	},
@@ -356,14 +390,6 @@ const arrListPatrolPdr = [
 		id: 'sign_3.41', sign: '3', part: '41', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.41',
 		title: [ 'Контроль', ],
 	},
-
-
-
-
-
-
-
-
 	{
 		id: 'sign_3.41', sign: '3', part: '41', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/3.41',
 		title: [ 'Контроль', ],
@@ -373,9 +399,18 @@ const arrListPatrolPdr = [
 
 
 
-
-
-
+{
+	id: 'sign_4', sign: '4',
+	txt: [ 'Наказові знаки', ],
+},
+	{
+		id: 'sign_4.1', sign: '4', part: '1', href_sign: '1',
+		title: [ 'Рух прямо', ],
+	},
+	{
+		id: 'sign_4.7', sign: '4', part: '7', href_sign: 'https://pdr.infotech.gov.ua/theory/road-signs/4.7',
+		title: [ 'Об’їзд перешкоди з правого боку', ],
+	},
 
 
 {

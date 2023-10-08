@@ -6,6 +6,9 @@ cmp-menu {
 
 	display: block;
  	width: 100%;
+
+	/*background-color: #ccc;*/
+
  
 } 
 	cmp-menu .clc { 
@@ -26,6 +29,7 @@ cmp-menu {
  	border-radius: 5px;
  	font-weight: bold;
 	background: linear-gradient( to top, #fff, #ccc );
+	background-color: red;
 	color: #000;
 	cursor: pointer;
  }

@@ -15,6 +15,12 @@ cmp-fabula {
  
 
 
+	cmp-fabula .link-pointer {
+		cursor: pointer;
+	}
+
+
+
 
 
 
@@ -45,7 +51,7 @@ cmp-fabula .modal {
 
 	cmp-fabula .modal .fabula-body .fabula-txt {
 		/*font-size: 120%;*/
-		margin: 0 0 20px 0;
+		margin: 0 0 30px 0;
 	}
 
 		cmp-fabula .modal .fabula-body .fabula-txt .fabula-action {
@@ -65,7 +71,23 @@ cmp-fabula .modal {
 
 
 
+	cmp-fabula .modal .fabula-body .reapeat {
 
+	}
+
+		cmp-fabula .modal .fabula-body .reapeat div {
+			margin: 0 0 7px 0;
+		}
+
+
+		cmp-fabula .modal .fabula-body .reapeat .repeat-warning {
+			padding: 0 5px;	
+			font-weight: bold;
+			font-style: oblique;
+
+			/*background-color: #f00;*/
+			color: #f00;
+		}
 
 
 
@@ -189,11 +211,6 @@ cmp-fabula .back-close {
 	cmp-fabula .back-close.close {
 		right: 15px;
 	}
-
-
-
-
-
 
 
 
