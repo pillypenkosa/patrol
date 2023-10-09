@@ -25,13 +25,14 @@ cmp-win-fabuly-postanov-pdr .menu-select-fabuly {
 		margin: 0 5px 5px 5px;
 		padding: 5px;
 		border-radius: 10px;
-		/*border: 1px solid #fff;*/
 		background: linear-gradient( to bottom, #fff, #ccc );
 		cursor: pointer;
 	}
 		cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .img {
 			height: 100px;
 			width: 100px;
+
+			flex-shrink: 0;
 		}
 			cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .img img {
 				height: 100%;
@@ -41,51 +42,12 @@ cmp-win-fabuly-postanov-pdr .menu-select-fabuly {
 
 		cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info {
 			margin: 0 0 0 10px;
-			position: relative;
 		}
-			/*
-			cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .offense-type {
-				margin: 0 0 0 0px;
-				position: absolute;
-				bottom: 0px;
-				left: 10px;
-				font-weight: bold;
-				font-style: oblique;
-			}
-				cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .offense-type.type-move {
-					color: #00f;
-				}
-				cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .offense-type.type-stop {
-					color: #f00;
-				}
-				cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .offense-type.type-disrepair {
-					color: #770;
-				}
-				cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .offense-type.type-doc {
-					color: #5a9;
-				}
-				cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .offense-type.type-pedestrian {
-					color: #09f;
-				}
-				cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .offense-type.type-other {
-					color: #fff;
-				}
-*/
-
 		cmp-win-fabuly-postanov-pdr .menu-select-fabuly .each .info .descr {
 			font-weight: bold;
 			font-style: oblique;
 			color: #00f;
 		}
-
-
-
-
-
-
-
-
-
 
 	cmp-win-fabuly-postanov-pdr .win-fabuly-postanov-pdr-title {
 		margin: 10px 0 10px 0;

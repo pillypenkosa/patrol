@@ -38,7 +38,7 @@ cmp-fabula .modal {
 
 
 	background-color: #fff;
-	z-index: 9;
+	z-index: 1;
 }
 
 	cmp-fabula .modal .fabula-body .img img {

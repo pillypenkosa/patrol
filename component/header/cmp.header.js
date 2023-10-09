@@ -40,7 +40,7 @@ class ComponentHeader {
 		//&#128660;
 		let html = `
 			<div class="head">
-				<div class="title">Патруль</div>
+				<div class="title">Sheriff</div>
 				<div class="btn-menu" onclick="ComponentHeader.clc()">
 					<img src="img/pic/menu.png" alt="close">
 				</div>
@@ -55,13 +55,9 @@ class ComponentHeader {
 
 
 	static clc() {
-		const name = this.name + '.html()';
+		const fooName = this.name + '.html()';
 
-
-		//alert( name );
-
-
-		//let elem = document.querySelector( '.nav-menu' );
+		//cns( 'var', 'fooName', fooName );
 
 		let elem = document.querySelector( '.nav-menu' );
 		if ( this.tfMenu ) {
@@ -73,11 +69,6 @@ class ComponentHeader {
 
 
 		this.tfMenu = !this.tfMenu;
-
-		//console.log( elem );
-
-
-
 	}
 
 

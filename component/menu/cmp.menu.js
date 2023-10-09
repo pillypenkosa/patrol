@@ -16,9 +16,11 @@ class ComponentMenu {
 	static arrBtns = [
 
 		{ title: 'Головна' 					, id: 'index' 					, href: '?', },
-		{ title: 'КУпАП' 					, id: 'kupap' 					, href: '?kupap', },
 		{ title: 'Фабули постанов ПДР' 		, id: 'fabuly_postanov_pdr' 	, href: '?fabuly-postanov-pdr', },
-		{ title: 'Фабули протоколів ПДР' 	, id: 'fabuly_protokoliv_pdr' 	, href: '?fabuly-protokoliv-pdr', },
+		
+
+		//{ title: 'КУпАП' 					, id: 'kupap' 					, href: '?kupap', },
+		//{ title: 'Фабули протоколів ПДР' 	, id: 'fabuly_protokoliv_pdr' 	, href: '?fabuly-protokoliv-pdr', },
 
 	];
 

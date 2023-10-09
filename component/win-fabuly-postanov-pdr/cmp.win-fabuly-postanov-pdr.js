@@ -50,6 +50,7 @@ class ComponentWinFabulyPostanovPdr {
 			<div class="menu-select-fabuly">${ ComponentWinFabulyPostanovPdr.showFabuly( 'all' ) }</div>
 		`;
 
+
 		setMeta({ 
 			title 			: 'Фабули постанов ПДР', 
 			description 	: 'Опис...', 
@@ -143,7 +144,6 @@ class ComponentWinFabulyPostanovPdr {
 				</div>
 			</div>`;
 		});
-
 
 		return htmlSelectFabula;
 	}

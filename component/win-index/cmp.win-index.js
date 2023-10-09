@@ -55,7 +55,7 @@ class ComponentWinIndex {
 
 
 		setMeta({
-			title 			: 'Фабули. Шпаргалка',
+			title 			: 'Шериф на зв\'язку )))',
 			description 	: 'Фабули. Шпаргалка',
 			//keywords 		: 'Ключові слова...' + name,
 			image 			: 'img/cars_sheriff.jpg',
